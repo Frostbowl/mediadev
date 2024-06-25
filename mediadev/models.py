@@ -25,6 +25,10 @@ class Membre(models.Model):
     firstname = models.CharField(max_length=150)
     bloque = models.BooleanField(default=False)
 
+class Test(models.Model):
+    testName = models.CharField(max_length=150)
+    testSurname = models.CharField(max_length=150)
+
     def __str__(self):
         return f'{self.firstname} {self.lastname}'
     
