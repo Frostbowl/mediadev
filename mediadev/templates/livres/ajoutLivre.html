@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ajout livre</title>
+</head>
+<body>
+    <h1>Ajouter un livre</h1>
+    <nav>
+        <ul>
+            <li><a href="{% url 'home' %}">Accueil</a></li>
+            <li><a href="{% url 'listelivres' %}">Les Livres</a></li>
+            <li><a href="{% url 'ajoutLivre' %}">Ajouter un livre</a></li>
+            <li><a href="{% url 'listedvds' %}">Les DVDs</a></li>
+            <li><a href="{% url 'ajoutDvd' %}">Ajouter un DVD</a></li>
+            <li><a href="{% url 'listecds' %}">Les CDs</a></li>
+            <li><a href="{% url 'ajoutcd' %} ">Ajouter un CD</a></li>
+            <li><a href="{% url 'listeplateaux' %}">Les jeux de plateau</a></li>
+            <li><a href="{% url 'ajoutplateau' %} ">Ajouter un jeu de plateau</a></li>
+            <li><a href="{%url 'listemembre' %}">Liste des membres</a></li>
+            <li><a href="{%url 'ajoutmembre' %}">Ajouter un membre</a></li>
+            <li><a href="{%url 'listeemprunt' %}">Liste des emprunts</a></li>
+            <li><a href="{%url 'ajoutemprunt' %}">Ajouter un emprunt</a></li>
+        </ul>
+    </nav>
+    <form action="" method="post" novalidate>
+        {% csrf_token %}
+        {{ ajoutlivre }}
+        <input type="submit" value="Ajouter">
+    </form>
+
+</body>
+</html>
